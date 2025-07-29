@@ -1,16 +1,15 @@
 import java.util.*;
+
 public class Question19 {
+    public static void main(String[] args) {
+        String[] names = new String[5]; // All elements are null by default
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Scanner sc=new Scanner(System.in);
-		int n=sc.nextInt();
-		for(int i=0;i<n;i++) {
-			for(int j=0;j<=i;j++) {
-				System.out.print("*"+" ");
-			}
-			System.out.println();
-		}
-	}
+        Optional<String> firstName = Optional.ofNullable(names[0]);
 
+        if (firstName.isPresent()) {
+            System.out.println(firstName.get().length());
+        } else {
+            System.out.println("Element is null");
+        }
+    }
 }

@@ -3,10 +3,18 @@ public class Question14 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int n=10;
-		for(int i=1;i<=10;i++) {
-			System.out.print(i+"\t");
+		Scanner sc=new Scanner(System.in);
+		String s=sc.nextLine();
+		String res="";
+		int i=0;
+		while(s.charAt(i)!='*') {
+			i++;
 		}
+			res+=s.substring(0,i-1);
+			res+=s.substring(i+2,s.length());
+			System.out.println(res);
+			
+		
 	}
 
 }

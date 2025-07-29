@@ -1,18 +1,25 @@
 import java.util.*;
+
 public class Question9 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner sc=new Scanner(System.in);
-		char c=sc.nextLine().charAt(0);
-		if(Character.isDigit(c)) {
-			System.out.println("digit");
+		String s=sc.nextLine();
+		int j=s.length()-1;
+		boolean found=true;
+		for(int i=0;i<s.length()/2;i++) {
+			if(s.charAt(i)!=s.charAt(j)) {
+				found=false;
+				break;
+			}
+			j--;
 		}
-		else if(Character.isLetter(c)) {
-			System.out.println("letter");
+		if(found) {
+			System.out.println("Given is a palindrome");
 		}
 		else {
-			System.out.println("special symbol");
+			System.out.println("Give is not a palindrome");
 		}
 	}
 

@@ -5,13 +5,20 @@ public class Question18 {
 		// TODO Auto-generated method stub
 		Scanner sc=new Scanner(System.in);
 		int n=sc.nextInt();
-		int s=0;
-		while(n!=0) {
-			int d=n%10;
-			s+=d;
-			n/=10;
+		sc.nextLine();
+		StringJoiner sj=new StringJoiner("-");
+		StringJoiner s2=new StringJoiner("-");
+		for(int i=0;i<n;i++) {
+			sj.add(sc.nextLine());
+			
 		}
-		System.out.println(s);
+		for(int i=0;i<n;i++) {
+			s2.add(sc.nextLine());
+		}
+		sj.merge(s2);
+		s2.merge(sj);
+		System.out.println(sj.toString());
+		System.out.println(s2.toString());
 	}
 
 }

@@ -1,17 +1,12 @@
 import java.util.*;
 public class Question20 {
-
+	String na="hello";
+	String default_name="india";
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Scanner sc=new Scanner(System.in);
-		int n=sc.nextInt();
-		int rev=0;
-		while(n!=0) {
-			int d=n%10;
-			rev=rev*10+d;
-			n/=10;
-		}
-		System.out.println(rev);
+		Question20 q=new Question20();
+		Optional<String> n=Optional.ofNullable(q.na);
+		System.out.print(n.orElse(q.default_name));
 	}
 
 }
